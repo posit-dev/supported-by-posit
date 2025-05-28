@@ -7,5 +7,5 @@ format:
   html:
     include-in-header:
       - text: |
-          <script src="https://cdn.jsdelivr.net/gh/posit-dev/supported-by-posit/js/ribbon.js"></script>
+          <script src="https://cdn.jsdelivr.net/gh/posit-dev/supported-by-posit/js/ribbon.min.js"></script>
 ```
