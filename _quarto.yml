@@ -7,6 +7,9 @@ website:
     left:
       - href: index.qmd
         text: Home
+    right:
+      - icon: github
+        href: https://github.com/posit-dev/supported-by-posit
 
 format:
   html:
@@ -16,6 +19,5 @@ format:
     theme:
       light: flatly
       dark: darkly
-    css: styles.css
     toc: true
 
