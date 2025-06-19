@@ -7,20 +7,24 @@ function addSupportedByPosit() {
 
         const styles = `
         #supported-by-posit {
-            height: calc(${headerHeight}px + 20px);
-            margin-top: -100px;
-            margin-bottom: -100px;
-            margin-left: 20px;
-            width: 80px;
+            height: ${headerHeight}px;
+            margin-top: -${headerHeight}px;
+            margin-bottom: -${headerHeight}px;
+            margin-left: 20px; 
+            width: 100px;
             order: 9999;
-            background-color: #999999;
-            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-
+            background-color: rgba(0, 0, 0, 0.25);
+            // FOR LIGHT THEME: background-color: rgba(255, 255, 255, 0.5);
+            padding: 10px;
             will-change: transform;
-            transition: transform 0.25s ease-in-out;
+            transition: background-color 0.2s ease, transform 0.25s ease-in-out;
             transform: translateY(0);
         }
-
+        @media (min-width: 992px) {
+            .navbar-container.container-fluid, .navbar.navbar-expand-lg {
+            padding-right: 0 !important;
+            }
+        }
         .headroom--unpinned #supported-by-posit {
             transform: translateY(-15px);
         }
@@ -30,7 +34,8 @@ function addSupportedByPosit() {
         }
 
         #supported-by-posit:hover {
-            background-color: #666666 !important;
+            background-color: #000 !important;
+            // FOR LIGHT THEME: background-color: #fff !important;
         }
         `
 
@@ -45,6 +50,8 @@ function addSupportedByPosit() {
         supportedByPositElement.target = '_blank';
         supportedByPositElement.title = 'Supported by Posit';
         supportedByPositElement.classList.add('d-none', 'd-lg-block');
+        supportedByPositElement.innerHTML = '<img src="supported-by-posit-dark.svg" alt="Supported by Posit" style="width: 100%; height: 100%;">';
+        // FOR LIGHT THEME: supportedByPositElement.innerHTML = '<img src="supported-by-posit-light.svg" alt="Supported by Posit" style="width: 100%; height: 100%;">';
 
         navbarContainer.appendChild(supportedByPositElement);
     } else {

@@ -1,5 +1,7 @@
 project:
   type: website
+  resources: 
+    - "*.svg"
 
 website:
   title: "supported-by-posit"
