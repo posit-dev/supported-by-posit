@@ -17,8 +17,8 @@ format:
       - text: |
           <script src="js/badge.js"></script>
     theme:
-      light: flatly
-      dark: darkly
+      light: yeti
+      dark: superhero
     toc: false
     page-layout: full
 
