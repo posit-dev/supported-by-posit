@@ -50,11 +50,11 @@ For questions, message the `#supported-by-posit` channel on Slack.
 
 ## Testing
 
-You can test how the badge will look on your website before making permanent changes by using your browser's JavaScript console.
+You can test how the badge will look on your website before making permanent changes by using your browser's JavaScript Console.
 
 ### Step 1: Load the Badge Script
 
-Run this snippet in the JavaScript Console once to load the badge:
+Run this snippet once to load the badge:
 
 ```javascript
 script = document.createElement('script');
