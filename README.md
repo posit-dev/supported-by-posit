@@ -1,6 +1,7 @@
 # Supported By Posit Badge
 
-The "Supported by Posit" badge is a clickable element that can be added to Quarto websites to indicate that [Posit, PBC](https://posit.co) supports the project.
+The "Supported by Posit" badge is a clickable element that can be added to Quarto websites to indicate that Posit, PBC supports the project.
+It appears on the far right of the top navigation bar and links to [https://posit.co](https://posit.co).
 
 ## Installation
 
