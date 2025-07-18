@@ -3,6 +3,7 @@ project:
 
 website:
   title: "Supported By Posit Badge"
+  favicon: img/posit-logo.png
   navbar:
     right:
       - icon: github
