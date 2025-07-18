@@ -13,6 +13,14 @@ const defaultSupportedbyPositConfig = {
 const supportedByPositConfig = {...defaultSupportedbyPositConfig, ...document.currentScript.dataset };
 
 function addSupportedByPositBadge(config) {
+
+    // Remove existing element, if any
+    const existingSupportedByPositElement = document.getElementById('supported-by-posit');
+    if (existingSupportedByPositElement) {
+      console.log("Removing existing element")
+      existingSupportedByPositElement.remove();
+    }
+
     const navElement = document.querySelector('nav.navbar');
     const navbarContainerElement = document.querySelector('.navbar-container.container-fluid');
 
