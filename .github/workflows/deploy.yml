@@ -34,9 +34,9 @@ jobs:
       run: |
         quarto render
 
-    - name: Replace ribbon.js references
+    - name: Replace badge.js references
       run: |
-        find _site -name "*.html" -type f -exec sed -i 's|<script src="js/ribbon\.js"></script>|<script src="https://cdn.jsdelivr.net/gh/posit-dev/supported-by-posit/js/ribbon.min.js"></script>|g' {} +
+        find _site -name "*.html" -type f -exec sed -i 's|<script src="js/badge\.js"></script>|<script src="https://cdn.jsdelivr.net/gh/posit-dev/supported-by-posit/js/badge.min.js"></script>|g' {} +
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3

@@ -15,9 +15,10 @@ format:
   html:
     include-in-header:
       - text: |
-          <script src="js/ribbon.js"></script>
+          <script src="js/badge.js"></script>
     theme:
       light: flatly
       dark: darkly
-    toc: true
+    toc: false
+    page-layout: full
 

@@ -12,7 +12,7 @@ const defaultSupportedbyPositConfig = {
 // Get configuration when script loads
 const supportedByPositConfig = {...defaultSupportedbyPositConfig, ...document.currentScript.dataset };
 
-function addSupportedByPosit(config) {
+function addSupportedByPositBadge(config) {
     const navElement = document.querySelector('nav.navbar');
     const navbarContainerElement = document.querySelector('.navbar-container.container-fluid');
 
@@ -115,4 +115,4 @@ function addSupportedByPosit(config) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => addSupportedByPosit(supportedByPositConfig));
+document.addEventListener('DOMContentLoaded', () => addSupportedByPositBadge(supportedByPositConfig));
