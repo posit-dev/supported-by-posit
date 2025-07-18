@@ -19,6 +19,6 @@ format:
     theme:
       light: yeti
       dark: superhero
-    toc: false
+    toc: true
     page-layout: full
 
