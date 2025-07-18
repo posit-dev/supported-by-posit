@@ -1,4 +1,18 @@
-function addSupportedByPosit() {
+const defaultSupportedbyPositConfig = {
+  'lightBg': "#404041",
+  'lightText': "#ffffff",
+  'lightLt': "#ee6331",
+  'lightGt': "#447099",
+  'darkBg': "#404041",
+  'darkText': "#ffffff",
+  'darkLt': "#ee6331",
+  'darkGt': "#447099",
+};
+
+// Get configuration when script loads
+const supportedByPositConfig = {...defaultSupportedbyPositConfig, ...document.currentScript.dataset };
+
+function addSupportedByPosit(config) {
     const navElement = document.querySelector('nav.navbar');
     const navbarContainerElement = document.querySelector('.navbar-container.container-fluid');
 
@@ -9,66 +23,36 @@ function addSupportedByPosit() {
         const headerHeight = navElement.offsetHeight;
 
         const styles = `
-        #logo-supported-by, #logo-text { fill: #404041; }
-        #logo-mark-gt { fill: #447099; }
-        #logo-mark-lt { fill: #ee6331; }
+        #logo-supported-by, #logo-text { fill: ${config.lightText}; }
+        #logo-mark-lt { fill: ${config.lightLt}; }
+        #logo-mark-gt { fill: ${config.lightGt}; }
 
         #supported-by-posit {
           display: flex;
           justify-content: center;
           align-items: center;
           order: 9999;
+
           margin-top: -100px;
           margin-bottom: -100px;
-          will-change: transform;
-          transition: transform 0.25s ease-in-out;
-          transform: translateY(0);
+          margin-right: 8px;
+          margin-left: 20px;
 
           width: 100px;
-          height: calc(${headerHeight}px + 20px);
-          margin-left: 20px;
-          background-color: #f2f2f2;
-          // background-color: #ffffff;
-          border-radius: 0 0 0 5px;
-          border-left: 1px solid #949494;
-          border-bottom: 1px solid #949494;
-          transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+          height: calc(${headerHeight}px - 16px);
+
+          background-color: ${config.lightBg};
+          border-radius: 4px;
         }
 
-        #supported-by-posit svg {
-          will-change: fill;
-          transition: fill 0.15s ease-in-out;
-          // transition: scale 0.1s ease-in-out;
-          transform: translateY(5px);
-        }
-
-        .headroom--unpinned #supported-by-posit {
-          transform: translateY(-15px);
-        }
-        
         #supported-by-posit:hover {
-          background-color: #ffffff;
-          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 2px rgba(21, 21, 21, 0.14), 0px 2px 4px rgba(21, 21, 21, 0.16);
         }
 
-        #supported-by-posit:hover svg {
-          // transform: scale(1.05);
-          // width: 68% !important;
-        }
-
-        body.quarto-dark #supported-by-posit {
-          background-color: #404041;
-          border-left: 1px solid #333;
-          border-bottom: 1px solid #333;
-        }
-
-        body.quarto-dark #supported-by-posit:hover {
-          background-color: #333333 !important;
-        }
-
-        body.quarto-dark svg g {
-          fill: #ffffff !important;
-        }
+        body.quarto-dark #supported-by-posit { background-color: ${config.darkBg}; }
+        body.quarto-dark #logo-supported-by, body.quarto-dark #logo-text { fill: ${config.darkText}; }
+        body.quarto-dark #logo-mark-lt { fill: ${config.darkLt}; }
+        body.quarto-dark #logo-mark-gt { fill: ${config.darkGt}; }
         `
 
         const styleElement = document.createElement('style');
@@ -122,8 +106,8 @@ function addSupportedByPosit() {
         const svgElement = svgTemplate.content.querySelector('svg');
         svgElement.setAttribute('aria-hidden', 'true');
         svgElement.setAttribute('role', 'presentation');
-        svgElement.style.width = '65%';
-        
+        svgElement.style.width = '64px';
+
         supportedByPositElement.appendChild(svgElement);
         navbarContainerElement.appendChild(supportedByPositElement);
     } else {
@@ -131,4 +115,4 @@ function addSupportedByPosit() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', addSupportedByPosit);
+document.addEventListener('DOMContentLoaded', () => addSupportedByPosit(supportedByPositConfig));
