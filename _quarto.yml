@@ -5,6 +5,9 @@ website:
   title: "Supported By Posit Badge"
   favicon: img/posit-logo.png
   navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
     right:
       - icon: github
         href: https://github.com/posit-dev/supported-by-posit

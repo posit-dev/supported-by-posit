@@ -53,6 +53,11 @@ function addSupportedByPositBadge(config) {
           border-radius: 4px;
         }
 
+        header.headroom--frozen #supported-by-posit {
+          display: flex !important;
+          margin: 8.5px;
+        }
+
         #supported-by-posit:hover {
           box-shadow: 0px 0px 2px rgba(21, 21, 21, 0.14), 0px 2px 4px rgba(21, 21, 21, 0.16);
         }
@@ -73,7 +78,7 @@ function addSupportedByPositBadge(config) {
         supportedByPositElement.id = 'supported-by-posit';
         supportedByPositElement.target = '_blank';
         supportedByPositElement.title = 'Supported by Posit';
-        supportedByPositElement.classList.add('d-none', 'd-sm-flex');
+        supportedByPositElement.classList.add('d-none', 'd-lg-flex');
 
         const svgTemplate = document.createElement('template');
         svgTemplate.innerHTML = `
