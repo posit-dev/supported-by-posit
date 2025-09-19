@@ -81,3 +81,9 @@ addSupportedByPositBadge({
 ```
 
 **Important:** All color parameters must be provided when calling the `addSupportedByPositBadge()` function. Once you're satisfied with the colors, add only the non-default ones to your `<script>` tag using the `data-*` attributes shown in the customization section.
+
+
+## Deploying
+
+When the script is updated on GitHub, purge the CDN cache to ensure users receive the latest version.
+To purge the script, visit: [purge.jsdelivr.net/gh/posit-dev/supported-by-posit/js/badge.min.js](https://purge.jsdelivr.net/gh/posit-dev/supported-by-posit/js/badge.min.js).
