@@ -59,10 +59,11 @@ function addSupportedByPositBadge(config) {
         }
 
         #supported-by-posit:hover {
-          box-shadow: 0px 0px 2px rgba(21, 21, 21, 0.14), 0px 2px 4px rgba(21, 21, 21, 0.16);
+          box-shadow: 0px 0px 2px rgba(21, 21, 21, 0.05), 0px 2px 4px rgba(21, 21, 21, 0.06);
         }
 
         body.quarto-dark #supported-by-posit { background-color: ${config.darkBg}; }
+        body.quarto-dark #supported-by-posit:hover { background-color: #2C2C2D; }
         body.quarto-dark #logo-supported-by, body.quarto-dark #logo-text { fill: ${config.darkText}; }
         body.quarto-dark #logo-mark-lt { fill: ${config.darkLt}; }
         body.quarto-dark #logo-mark-gt { fill: ${config.darkGt}; }
