@@ -43,10 +43,10 @@ function addSupportedByPositBadge(config) {
 
           margin-top: -100px;
           margin-bottom: -100px;
-          margin-right: 8px;
-          margin-left: 20px;
+          margin-right: 20px;
+          margin-left: 10px;
 
-          width: 100px;
+          width: 90px;
           height: calc(${headerHeight}px - 16px);
 
           background-color: ${config.lightBg};
@@ -120,7 +120,7 @@ function addSupportedByPositBadge(config) {
         const svgElement = svgTemplate.content.querySelector('svg');
         svgElement.setAttribute('aria-hidden', 'true');
         svgElement.setAttribute('role', 'presentation');
-        svgElement.style.width = '64px';
+        svgElement.style.width = '58px';
 
         supportedByPositElement.appendChild(svgElement);
         navbarContainerElement.appendChild(supportedByPositElement);
