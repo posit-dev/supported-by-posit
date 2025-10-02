@@ -3,7 +3,8 @@ let supportedByPositConfig = {
   'lightBg': '#ffffff',
   'lightFg': '#404041',
   'darkBg': '#404041',
-  'darkFg': '#ffffff'
+  'darkFg': '#ffffff',
+  'marginLeft': 10,
 };
 
 // Get user configuration when script loads
@@ -75,7 +76,7 @@ function addSupportedByPositBadge(config) {
         display: flex;
         margin-top: -100px;
         margin-bottom: -100px;
-        margin-left: 10px;
+        margin-left: ${config.marginLeft}px;
       }
     }
     
