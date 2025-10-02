@@ -1,13 +1,17 @@
 project:
   type: website
+  post-render:
+    - "cp -r docs _site/pkgdown"
 
 website:
   title: "Supported By Posit Badge"
   favicon: img/posit-logo.png
   navbar:
     left:
-      - text: "Home"
+      - text: "Quarto demo"
         href: index.qmd
+      - text: "pkgdown demo"
+        href: pkgdown/index.html
     right:
       - icon: github
         href: https://github.com/posit-dev/supported-by-posit

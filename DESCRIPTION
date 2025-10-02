@@ -1,0 +1,13 @@
+Package: supportedbyposit
+Title: Add Supported by Posit Badge to Package Website
+Version: 0.0.0.9000
+Authors@R: 
+    c(person("Jeroen", "Janssens", , "jeroen.janssens@posit.co", role = c("aut", "cre")),
+      person("Greg", "Swineheart", , "greg@posit.co", role = c("aut")))
+Description: The "Supported by Posit" badge is a clickable element that can be added to package websites to indicate that Posit, PBC supports the project.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+URL: https://github.com/posit-dev/supported-by-posit
+BugReports: https://github.com/posit-dev/supported-by-posit/issues

@@ -1,0 +1,23 @@
+url: 
+template:
+  bootstrap: 5
+  light-switch: true
+  includes:
+    in_header: |
+      <script src="../js/badge.js"></script>
+
+home:
+  sidebar:
+    structure: [toc]
+
+navbar:
+  structure:
+    left: [quarto, pkgdown]
+    right: [search, github, lightswitch]
+  components:
+    quarto:
+      text: "Quarto demo"
+      href: ".."
+    pkgdown:
+      text: "pkgdown demo"
+      href: "index.html"
