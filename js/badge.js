@@ -4,7 +4,9 @@ let supportedByPositConfig = {
   lightFg: '#404041',
   darkBg: '#404041',
   darkFg: '#ffffff',
-  marginLeft: 10
+  hideBelow: 992,
+  marginLeft: 10,
+  maxHeight: 54,
 }
 
 // Get user configuration when script loads
@@ -61,7 +63,7 @@ function addSupportedByPositBadge (config) {
 
     width: 100px;
     height: calc(${navElement.offsetHeight}px - 16px);
-    max-height: 54px;
+    max-height: ${config.maxHeight}px;
 
     background-color: ${config.lightBg};
     border-radius: 4px;
@@ -71,12 +73,19 @@ function addSupportedByPositBadge (config) {
     transition: all 0.1s ease-in-out;
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: 992px) and (max-width: ${config.hideBelow}px) {
     #supported-by-posit {
-      display: flex;
-      margin-top: -100px;
-      margin-bottom: -100px;
-      margin-left: ${config.marginLeft}px;
+      display: none;
+    }
+  }
+
+  @media (min-width: ${config.hideBelow}px) {
+    #supported-by-posit {
+      display: flex !important;
+      margin-top: -100px !important;
+      margin-bottom: -100px !important;
+      margin-left: ${config.marginLeft}px !important;
+      background-color: red !important;
     }
   }
   
