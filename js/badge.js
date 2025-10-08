@@ -61,6 +61,7 @@ function addSupportedByPositBadge (config) {
 
     width: 100px;
     height: calc(${navElement.offsetHeight}px - 16px);
+    max-height: 54px;
 
     background-color: ${config.lightBg};
     border-radius: 4px;
@@ -106,7 +107,7 @@ function addSupportedByPositBadge (config) {
 
   const supportedByPositElement = document.createElement('a')
   supportedByPositElement.setAttribute('aria-label', 'Supported by Posit')
-  supportedByPositElement.href = 'https://posit.co'
+  supportedByPositElement.href = `https://posit.co?utm_source=${window.location.hostname}&utm_medium=referral&utm_content=supported-by-posit`
   supportedByPositElement.id = 'supported-by-posit'
   supportedByPositElement.target = '_blank'
   supportedByPositElement.title = 'Supported by Posit'
