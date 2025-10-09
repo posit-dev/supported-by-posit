@@ -85,7 +85,6 @@ function addSupportedByPositBadge (config) {
       margin-top: -100px !important;
       margin-bottom: -100px !important;
       margin-left: ${config.marginLeft}px !important;
-      background-color: red !important;
     }
   }
   
