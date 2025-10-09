@@ -51,26 +51,22 @@ function addSupportedByPositBadge (config) {
   #logo-supported-by, #logo-posit, #logo-lt, #logo-gt { fill: ${config.lightFg}; }
 
   #supported-by-posit {
-    display: ${defaultDisplay};
-    justify-content: center;
     align-items: center;
-    order: 9999;
-
-    margin-top: 8px;
-    margin-bottom: 8px;
-    margin-right: 0px;
-    margin-left: 0px;
-
-    width: 100px;
-    height: calc(${navElement.offsetHeight}px - 16px);
-    max-height: ${config.maxHeight}px;
-
     background-color: ${config.lightBg};
     border-radius: 4px;
-
-    outline: 2px solid ${config.lightBg};
+    display: ${defaultDisplay};
+    height: calc(${navElement.offsetHeight}px - 16px);
+    justify-content: center;
+    margin-bottom: 8px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 8px;
+    max-height: ${config.maxHeight}px;
+    order: 9999;
     outline-offset: -2px;
+    outline: 2px solid ${config.lightBg};
     transition: all 0.1s ease-in-out;
+    width: 100px;
   }
 
   @media (min-width: 992px) and (max-width: ${config.hideBelow}px) {
@@ -82,9 +78,9 @@ function addSupportedByPositBadge (config) {
   @media (min-width: ${config.hideBelow}px) {
     #supported-by-posit {
       display: flex !important;
-      margin-top: -100px !important;
       margin-bottom: -100px !important;
       margin-left: ${config.marginLeft}px !important;
+      margin-top: -100px !important;
     }
   }
   
