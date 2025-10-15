@@ -4,12 +4,17 @@ The "Supported by Posit" badge is a clickable element that can be added to Quart
 It appears on the far right of the top navigation bar or at the bottom of the hamburger menu.
 It links to [Posit's main website](https://posit.co).
 
-## Websites Using This Badge
 
-- [ggplot2](https://ggplot2.tidyverse.org)
-- [Great Tables](https://posit-dev.github.io/great-tables/articles/intro.html)
-- [Pointblank](https://posit-dev.github.io/pointblank/)
-- [Quarto](https://quarto.org)
+## Featured Websites
+
+The following websites have the "Supported by Posit" badge: 
+[ggplot2](https://ggplot2.tidyverse.org),
+[Great Tables](https://posit-dev.github.io/great-tables/articles/intro.html),
+[gt](https://gt.rstudio.com),
+[Plotnine](https://plotnine.org),
+[Pointblank](https://posit-dev.github.io/pointblank/),
+[pointblank](https://rstudio.github.io/pointblank/), and
+[Quarto](https://quarto.org).
 
 
 ## Installation
