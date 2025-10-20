@@ -1,7 +1,10 @@
 project:
   type: website
+  render:
+  - "!utils/"
   post-render:
     - "cp -r docs _site/pkgdown"
+    - "cp -r utils/screenshots _site/"
 
 website:
   title: "Supported By Posit Badge"
