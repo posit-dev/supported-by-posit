@@ -111,7 +111,17 @@ function addSupportedByPositBadge (config) {
 
   const supportedByPositElement = document.createElement('a')
   supportedByPositElement.setAttribute('aria-label', 'Supported by Posit')
-  supportedByPositElement.href = `https://posit.co?utm_source=${window.location.hostname}&utm_medium=referral&utm_content=supported-by-posit`
+
+  // Determine utm_source: for github.io domains, include first directory
+  let utmSource = window.location.hostname
+  if (utmSource.endsWith('github.io')) {
+    const pathParts = window.location.pathname.split('/').filter(part => part.length > 0)
+    if (pathParts.length > 0) {
+      utmSource = `${utmSource}/${pathParts[0]}`
+    }
+  }
+
+  supportedByPositElement.href = `https://posit.co?utm_source=${utmSource}&utm_medium=referral&utm_content=supported-by-posit`
   supportedByPositElement.id = 'supported-by-posit'
   supportedByPositElement.target = '_blank'
   supportedByPositElement.title = 'Supported by Posit'
