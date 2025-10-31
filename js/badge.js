@@ -121,7 +121,7 @@ function addSupportedByPositBadge (config) {
     }
   }
 
-  supportedByPositElement.href = `https://posit.co?utm_source=${utmSource}&utm_medium=referral&utm_content=supported-by-posit`
+  supportedByPositElement.href = `https://posit.co?utm_source=${encodeURIComponent(utmSource)}&utm_medium=referral&utm_content=supported-by-posit`
   supportedByPositElement.id = 'supported-by-posit'
   supportedByPositElement.target = '_blank'
   supportedByPositElement.title = 'Supported by Posit'
