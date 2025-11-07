@@ -8,12 +8,17 @@ It links to [Posit's main website](https://posit.co).
 ## Featured Websites
 
 The following websites have the "Supported by Posit" badge: 
+[dplyr](https://dplyr.tidyverse.org),
 [ggplot2](https://ggplot2.tidyverse.org),
 [Great Tables](https://posit-dev.github.io/great-tables/articles/intro.html),
 [gt](https://gt.rstudio.com),
+[lubridate](https://lubridate.tidyverse.org),
+[mirai](https://mirai.r-lib.org),
+[nanonext](nanonext.r-lib.org),
 [Plotnine](https://plotnine.org),
 [Pointblank](https://posit-dev.github.io/pointblank/),
-[pointblank](https://rstudio.github.io/pointblank/), and
+[pointblank](https://rstudio.github.io/pointblank/),
+[purrr](https://purrr.tidyverse.org), and
 [Quarto](https://quarto.org).
 
 
@@ -46,7 +51,7 @@ template:
 
 ## Customization
 
-If the default colors don't match your website's design, you can customize the badge colors for both light and dark modes. The badge supports customization of the background color, text color, and the colors of the less-than and greater-than symbols (`<` and `>`).
+If the default colors or settings don't match your website's design, you can customize the badge. The badge supports customization of the background color, foreground color, whether it should be hidden below a certain width to accommodate crowded navigation headers, the left margin, and the maximum height.
 
 **Note:** Dark mode colors are ignored if your website only supports light mode.
 
@@ -63,7 +68,10 @@ format:
                   data-light-bg="#ffffff"
                   data-light-fg="#404041"
                   data-dark-bg="#404041"
-                  data-dark-fg="#ffffff"></script>
+                  data-dark-fg="#ffffff"
+                  data-hide-below="992"
+                  data-margin-left="10"
+                  data-max-height="54"></script>
 ```
 
 ## _pkgdown.yml
@@ -76,11 +84,14 @@ template:
               data-light-bg="#ffffff"
               data-light-fg="#404041"
               data-dark-bg="#404041"
-              data-dark-fg="#ffffff"></script>
+              data-dark-fg="#ffffff"
+              data-hide-below="992"
+              data-margin-left="10"
+              data-max-height="54"></script>
 ```
 :::
 
-**Best Practice:** Only include the `data-*` attributes for colors you want to override from the defaults.
+**Best Practice:** Only include the `data-*` attributes for colors and settings you want to override from the defaults.
 
 To comply with Posit's brand guide, please choose from the following colors:
 
@@ -94,30 +105,25 @@ For questions, message the `#supported-by-posit` channel on Slack.
 
 You can test how the badge will look on your website before making permanent changes by using your browser's JavaScript Console.
 
-### Step 1: Load the Badge Script
-
-Run this snippet once to load the badge:
-
 ```javascript
+// Step 1: Load the Badge Script
 script = document.createElement('script');
 script.src = 'https://cdn.jsdelivr.net/gh/posit-dev/supported-by-posit/js/badge.min.js';
 document.head.appendChild(script);
-```
 
-### Step 2: Test Different Colors
-
-After loading the script, you can experiment with different color combinations by running:
-
-```javascript
+// Step 2: Test Different Settings
 addSupportedByPositBadge({
   'lightBg': '#ffffff',
   'lightFg': '#404041',
   'darkBg': '#404041',
-  'darkFg': '#ffffff'
+  'darkFg': '#ffffff',
+  'hideBelow': 992,
+  'marginLeft': 10,
+  'maxHeight': 54
 });
 ```
 
-**Important:** All color parameters must be provided when calling the `addSupportedByPositBadge()` function. Once you're satisfied with the colors, add only the non-default ones to your `<script>` tag using the `data-*` attributes shown in the customization section.
+**Important:** All parameters must be provided when calling the `addSupportedByPositBadge()` function. Once you're satisfied, add only the non-default ones to your `<script>` tag using the `data-*` attributes shown in the customization section.
 
 
 ## Deploying
