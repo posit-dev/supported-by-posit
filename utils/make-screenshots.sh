@@ -10,7 +10,7 @@ else
   REPO="$1"
 fi
 
-# (cd "repos/$REPO" && Rscript -e "pkgdown::init_site(); pkgdown::build_home()")
+(cd "repos/$REPO" && Rscript -e "pkgdown::init_site(); pkgdown::build_home()")
 
 if [ -d "repos/$REPO/docs/dev" ]; then
   DEV="/dev"

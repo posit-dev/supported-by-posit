@@ -1,6 +1,6 @@
 ## Overview
 
-This PR adds the "Supported by Posit" badge to the website.
+This PR adds the "Supported by Posit" badge to the _REPO_ website.
 
 ## Background
 

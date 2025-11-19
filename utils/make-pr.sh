@@ -12,9 +12,9 @@ fi
 
 ./make-pr-description.sh "$REPO"
 
-cd "repos/$1" || exit 1
+cd "repos/$REPO" || exit 1
 git checkout -b supported-by-posit
-git add -A
+find . -name '_pkgdown.yml' -exec git add {} +
 git commit -m "Include supported-by-posit script"
 git push -u origin supported-by-posit
-gh pr create --title 'Add "Supported By Posit" badge to website' --body-file "../../pr-descriptions/$REPO.md"
+gh pr create --title "Add \"Supported By Posit\" badge to $REPO website" --body-file "../../pr-descriptions/$REPO.md"
