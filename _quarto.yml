@@ -4,7 +4,7 @@ project:
   - "*.qmd"
   - "!utils/"
   post-render:
-  - "cp -r img _site/img"
+  - "cp -r img _site/"
   - "cp -r docs _site/pkgdown"
   - "cp -r utils/screenshots _site/screenshots"
 
