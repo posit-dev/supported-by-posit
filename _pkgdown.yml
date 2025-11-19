@@ -5,6 +5,11 @@ template:
   includes:
     in_header: |
       <script src="../js/badge.js"></script>
+      <style>
+        .template-home .page-header {
+          min-height: unset;
+        }
+      </style>
 
 home:
   sidebar:

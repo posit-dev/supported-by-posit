@@ -1,4 +1,9 @@
 ---
 ---
+<style>
+nav#TOC img {
+  display: none;
+}
+</style>
 
 {{< include README.md >}}

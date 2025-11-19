@@ -1,4 +1,4 @@
-# Supported By Posit Badge
+# Supported By Posit Badge <img src="/img/supported-by-posit-hex-small.png" style="margin-left: 20px; height: 150px" align="right" height="150" alt="supported-by-posit website" />
 
 The "Supported by Posit" badge is a clickable element that can be added to Quarto and pkgdown websites to indicate that Posit, PBC supports the project.
 It appears on the far right of the top navigation bar or at the bottom of the hamburger menu.
@@ -7,7 +7,7 @@ It links to [Posit's main website](https://posit.co).
 
 ## Featured Websites
 
-The following websites have the "Supported by Posit" badge: 
+The following websites have the "Supported by Posit" badge:
 [dplyr](https://dplyr.tidyverse.org),
 [ggplot2](https://ggplot2.tidyverse.org),
 [Great Tables](https://posit-dev.github.io/great-tables/articles/intro.html),
@@ -15,11 +15,14 @@ The following websites have the "Supported by Posit" badge:
 [lubridate](https://lubridate.tidyverse.org),
 [mirai](https://mirai.r-lib.org),
 [nanonext](nanonext.r-lib.org),
+[pkgdown](https://pkgdown.r-lib.org)
 [Plotnine](https://plotnine.org),
 [Pointblank](https://posit-dev.github.io/pointblank/),
 [pointblank](https://rstudio.github.io/pointblank/),
-[purrr](https://purrr.tidyverse.org), and
-[Quarto](https://quarto.org).
+[purrr](https://purrr.tidyverse.org),
+[Quarto](https://quarto.org),
+[Shiny](https://shiny.posit.co),
+and many others.
 
 
 ## Installation
