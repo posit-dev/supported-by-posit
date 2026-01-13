@@ -26,7 +26,7 @@ format:
     include-in-header:
       - text: |
           <script src="js/badge.js"></script>
-          <script defer data-domain="https://posit-dev.github.io/supported-by-posit/" src="https://plausible.io/js/plausible.js">
+          <script async src="https://plausible.io/js/pa-NFGMTzYn--y53tYgIKdqU.js"></script><script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}}; plausible.init()</script>
 
     theme:
       light: yeti
