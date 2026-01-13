@@ -26,6 +26,8 @@ format:
     include-in-header:
       - text: |
           <script src="js/badge.js"></script>
+          <script defer data-domain="https://posit-dev.github.io/supported-by-posit/" src="https://plausible.io/js/plausible.js">
+
     theme:
       light: yeti
       dark: superhero
