@@ -2,7 +2,7 @@
 
 The "Supported by Posit" badge is a clickable element that can be added to Quarto and pkgdown websites to indicate that Posit, PBC supports the project.
 It appears on the far right of the top navigation bar or at the bottom of the hamburger menu.
-It links to [Posit's main website](https://posit.co).
+It links to [Posit's Open Source website](https://opensource.posit.co).
 
 
 ## Featured Websites
